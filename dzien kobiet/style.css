@@ -1,0 +1,128 @@
+body {
+    overflow: hidden;
+    background: linear-gradient(282deg,#321010,#850606,#850606,#530b0b);
+    background-size: 120% 120%;
+    animation: gradient 18s infinite;
+    width: 150vh;
+}
+.kontener {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+#shadow {
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.466);
+    opacity: 0.5;
+    position: absolute;
+    transform: scale(0.5, 1);
+    filter: blur(50px);
+    z-index: -1;
+}
+.kot {
+    scale: 0.7;
+    animation: kot 1s infinite;
+}
+.bukiecik2 {
+    animation: bukiecik 3s infinite ;
+    position: absolute;
+    margin-right: 18vw;
+    margin-top: 10vh;
+    scale: 0.7;
+}
+.napis {
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    margin-top: -70vh;
+    color: black;
+    font-size: 4.5vh;
+    background-color: rgb(221, 198, 155);
+    padding: 4px;
+    border-radius: 40px;
+    transition: 1s;
+    box-shadow: 8px 8px rgba(0, 0, 0, 0.651);
+}
+.napis:hover {
+    transform: scale(1.1);
+}
+@media only screen and (max-width: 800px) {
+    .kot {
+        scale: 1.3;
+    }
+    .bukiecik2 {
+        scale: 1.3;
+        margin-right: 25vw;
+        margin-top: 10vh;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .kot {
+        scale: 1.6;
+    }
+    .bukiecik2 {
+        scale: 1.6;
+        margin-right: 30vw;
+        margin-top: 10vh;
+    }
+}
+@media only screen and (max-width: 300px) {
+    .kot {
+        scale: 2;
+    }
+    .bukiecik2 {
+        scale: 2;
+        margin-right: 35vw;
+        margin-top: 10vh;
+    }
+}
+
+@keyframes bukiecik {
+    0% {
+        transform: scale(1.1) rotateZ(-30deg);
+      }
+      25%{
+        transform: scale(1.2) rotateZ(-45deg);
+      }
+      50% {
+        transform: scale(1.3) rotateZ(-30deg);
+      }
+      75% { 
+        transform: scale(1.2) rotateZ(-15deg);
+      }
+      100% {
+        transform: scale(1.1) rotateZ(-30deg);
+      }
+}
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+@keyframes kot {
+    0% {
+        transform: rotateZ(0);
+    }
+    25% {
+        transform: rotateZ(3deg);
+    }
+    50% {
+        transform: rotateZ(0);
+    }
+    75% {
+        transform: rotateZ(-3deg);
+    }
+    100% {
+        transform: rotateZ(0);
+    }
+}
